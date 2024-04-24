@@ -1,0 +1,130 @@
+.loading,
+.wrapper{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.cards{
+  
+  width: 100%;
+}
+.loading__item,
+.card{
+    padding: 5px;
+  width: 80%;
+  // border: 2px solid grey;
+  border-radius: 10px;
+  .loading__img,
+  img{
+    display: block;
+    object-fit: contain;
+    margin: auto;
+    width: 80%;
+    height: 300px;
+    padding: 10px;
+    
+  }
+  &__info{
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background: #eee;
+    h3{
+      line-height: 60px;
+      display: -webkit-box;
+        line-clamp: 1;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+    span{
+      text-decoration: line-through;
+    }
+    
+  }
+    &__desc {
+      font-size: 16px;
+      line-clamp: 2;
+      display:  -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+    &__price{
+      font-size: 20px;
+    }
+    &__star{
+
+      display: flex;
+      align-items: center;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__bottom{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+
+}
+.see__more__btn {
+  display: block;
+  margin: auto;
+  border: 1px solid grey;
+  padding: 10px;
+  color: black;
+  background: #eee;
+  cursor: pointer;
+}
+
+.see__more__btn:hover {
+  background: #aaa;
+
+}
+
+.see__more__btn:disabled {
+  opacity: 0.9;
+  cursor: no-drop;
+}
+
+.see__more__btn:disabled:hover {
+  background-color: skyblue;
+}
+
+
+.loading__title {
+  width: 80%;
+  height: 26px;
+  background: red;
+  margin-top: 10px;
+}
+
+.loading__title:last-child {
+  width: 60%;
+}
+
+.bg__animation {
+  background: linear-gradient(90deg, #eee, #ddd, #eee);
+  background-size: 200%;
+  animation: bgMove 1s linear 0s infinite;
+}
+
+
+
+
+
+
+
+
+@keyframes bgMove {
+  to {
+    background-position: 200%;
+  }
+}

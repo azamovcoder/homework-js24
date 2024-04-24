@@ -1,0 +1,148 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: white;
+  transition: 0.5s;
+  border-bottom: 1px solid #c4cdd5;
+  &__top {
+    background-color: #454f5b;
+    padding: 12px 0;
+  }
+  &__top__text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+  }
+  &__navbar {
+    padding: 20px 0;
+    justify-content: space-between;
+  }
+  &__left-card {
+    display: flex;
+    align-items: center;
+    gap: 101px;
+  }
+  &__list {
+    gap: 50px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__item {
+    transition: 0.4s;
+    border-top: 2px solid transparent;
+  }
+  &__link {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: #161c24;
+  }
+
+  &__hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: white;
+
+    span {
+      width: 25px;
+      height: 3px;
+      background: skyblue;
+      border-radius: 2px;
+    }
+  }
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .header__phone-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .header__phone-link p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.48px;
+    color: #454f5b;
+  }
+  &__btns__part {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+.show__header__shrink {
+  box-shadow: 0px 0px 5px skyblue;
+}
+
+@media (max-width: 1250px) {
+  .header {
+    &__list {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100vh;
+      background-color: white;
+      box-shadow: 0px 0px 50px rgba(128, 128, 128, 0.239);
+      transition: 0.5s;
+      z-index: 9999;
+    }
+
+    &__hamburger {
+      display: flex;
+    }
+
+    &__show__list {
+      left: 0;
+    }
+
+    &__item-close {
+      position: absolute;
+      display: block;
+      color: red;
+      top: 15px;
+      right: 20px;
+    }
+    &__top__text {
+      font-size: 14px;
+    }
+  }
+  .header__phone-link {
+    color: white;
+  }
+}
+@media (max-width: 650px) {
+  .header {
+    &__phone-link img,
+    &__phone-link p {
+      display: none;
+    }
+    &__top__text {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .header {
+    &__top__text {
+      font-size: 12px;
+    }
+    &__list {
+      width: 80%;
+    }
+  }
+}
